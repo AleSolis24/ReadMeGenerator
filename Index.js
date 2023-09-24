@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./Generator');
+const generateMarkdown = require('./Generator/Generator');
 // TODO: Create an array of questions for user input
 const questions = [
     //this is porviding a prompt to the user to ask for their github username.
