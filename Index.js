@@ -58,7 +58,12 @@ const questions = [
         name: 'contact',
         message: 'What is the best method to contact you?',
         default: 'Email'
-    }
+    },
+    {
+        type: 'input',
+        name: 'licence',
+        message: 'What kind of licence did you use for this readme?',
+    },
 ];
 
 // TODO: Create a function to write README file
