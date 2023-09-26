@@ -2,10 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
+//this will link to my generate.JS file to create the Readme.md for the user
 const generateMarkdown = require('./Generator/Generator');
 // TODO: Create an array of questions for user input
 const questions = [
-    //this is porviding a prompt to the user to ask for their github username.
+    //this is porviding a prompt of array of questions to tell the user to use to generate the ReadMe.md
     {
         type: 'input',
         name: 'Github',
@@ -60,18 +61,21 @@ const questions = [
         default: 'Email'
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'licence',
         message: 'What kind of licence did you use for this readme?',
+        choices: ['MIT', 'GPL'],
     },
 ];
 
 // TODO: Create a function to write README file
+//
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
 // TODO: Create a function to initialize app
+// this function is creating the prompt/questions to ask the user and once the user has answer all the quesitons it will log "Creating ReadMe.md"
 function init() {
     inquirer.prompt(questions).then((inquirerResponses) => {
       console.log('Creating ReadMe.md ..');
