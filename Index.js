@@ -9,13 +9,14 @@ const questions = [
     //this is porviding a prompt of array of questions to tell the user to use to generate the ReadMe.md
     {
         type: 'input',
-        name: 'Github',
+        name: 'github',
         message: 'What is your Github?',
+        
     },
     
     {
         type: 'input',
-        name: 'email address',
+        name: 'email',
         message: 'What is your email?',
     
     },
@@ -26,14 +27,14 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Descirbtion',
-        message: 'Describe the reason of the project',
+        name: 'description',
+        message: 'Describe your github project',
 
     }, 
     {
         type: 'input',
-        name: 'github url',
-        message: "Provide your github URL",
+        name: 'Usage',
+        message: "What do I need to know about this repo?",
     },
     {
         type: 'input',
@@ -62,8 +63,8 @@ const questions = [
     },
     {
         type: 'list',
-        name: 'licence',
-        message: 'What kind of licence did you use for this readme?',
+        name: 'license',
+        message: 'What kind of license did you use for this readme?',
         choices: ['MIT', 'GPL'],
     },
 ];
