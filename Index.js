@@ -38,7 +38,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'test',
+        name: 'Test',
         message: 'how to test your NPM',
         default: 'NPM run test',
 
@@ -52,7 +52,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'effort',
+        name: 'Effort',
         message: 'How did you contribute in this project?'
     },
     {

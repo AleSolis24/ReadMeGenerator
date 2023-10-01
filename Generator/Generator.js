@@ -34,19 +34,18 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.Title}
-  ${renderLicenseLink(data.license)} 
-  ${renderLicenseBadge(data.license)}
+  [![License Badge](${renderLicenseBadge(data.license)})](${renderLicenseLink(data.license)})
   ## Table of Contents 
 
 * [Title](#Title)
 
-* [Usage](#usage)
+* [Usage](#Usage)
 
-* [effort](#effort)
+* [Effort](#Effort)
 
-* [Tests](#tests)
+* [Tests](#Tests)
 
-* [Questions](#questions)
+* [Questions](#Questions)
 
 ## Install
 
@@ -62,16 +61,16 @@ ${data.Usage}
 
 ${renderLicenseSection(data.license)}
   
-## effort
+## Effort
 
-${data.effort}
+${data.Effort}
 
-## test
+## Test
 
 To run tests, run the following command:
 
 \`\`\`
-${data.test}
+${data.Test}
 \`\`\`
 
 ## Questions
