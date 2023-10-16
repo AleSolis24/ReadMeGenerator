@@ -70,7 +70,7 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-//
+//This function is writing data to my file to my directory for my node to work 
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }

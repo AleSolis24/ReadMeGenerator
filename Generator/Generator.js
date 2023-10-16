@@ -4,7 +4,7 @@ function renderLicenseBadge(license)
 {
 
   if (!license) return '';
-
+// this is my license for the user to choose 
   return `https://img.shields.io/badge/license-${license}-blue.svg`;
 }
 
@@ -32,7 +32,9 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
+// this function is linking up with my index.js so that when the user answer their questions their responses will display here which is the readme.md
 function generateMarkdown(data) {
+  // this is how the readme will display once the user is done answering the questions 
   return `# ${data.Title}
   [![License Badge](${renderLicenseBadge(data.license)})](${renderLicenseLink(data.license)})
   ## Table of Contents 
@@ -46,6 +48,14 @@ function generateMarkdown(data) {
 * [Tests](#Tests)
 
 * [Questions](#Questions)
+
+## Description
+
+Describe this project:
+
+\`\`\`
+${data.description}
+\`\`\`
 
 ## Install
 
@@ -82,5 +92,5 @@ If you have any questions about the repo, open an issue or contact me directly a
   }/).
 `;
 }
-
+// this is accessing my genratemarkdown.js to link with this file 
 module.exports = generateMarkdown;
